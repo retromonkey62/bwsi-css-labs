@@ -47,7 +47,7 @@ def sanitize(prompt: str) -> float:
             print("Invalid input. Please enter a valid number")
 def main():
     
-    print(f"===== Simple Calculator =====")
+    print(f"______________ Simple Calculator ______________")
 
     # Ask the user for sample input    
     num1 = sanitize("Enter the first number: ")
