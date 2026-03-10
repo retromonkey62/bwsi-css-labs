@@ -37,5 +37,10 @@ def test_invalid_operation():
     with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
         simple_calculator("", 5, 3)                     # Test for empty operation
 
+def test_invalid_number():
+    with pytest.raises(TypeError, match="Invalid input. Please enter a valid number"):
+        simple_calculator('add', 'five', 'three')       # Test for wrong number format
+    with pytest.raises(TypeError, match="Invalid input. Please enter a valid number"):
+        simple_calculator('divide', '', '')             # Test for no number input2
 if __name__ == "__main__":
     pytest.main()
