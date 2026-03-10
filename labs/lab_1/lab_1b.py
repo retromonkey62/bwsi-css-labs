@@ -23,6 +23,9 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
         float: The result of the operation.
     """
 
+    if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
+        raise TypeError("Invalid input. Please enter a valid number")
+
     if operation == "add":
         return num1 + num2
     elif operation == "subtract":
