@@ -49,7 +49,6 @@ def sanitize_num(prompt: str) -> float:
         except ValueError:
             print("Invalid input. Please enter a valid number")
 
-
 def sanitize_op() -> str:
 
     operations = ['add', 'subtract', 'multiply', 'divide']
